@@ -1,0 +1,37 @@
+# this is a comment
+
+name: Andrzej
+
+names: #Comment
+  - John
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+  author: Horstman
+  publisher: Helion
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false,False
+
+string_val: "This is it's quote"
+
+include_new_lines: |
+  adsdaf
+  fasg
+  awfaf
+  fwa
+
+ignore_new_lines: >
+  This is
+  one long
+  sentence.
+
+
