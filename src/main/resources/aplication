@@ -1,5 +1,0 @@
-anty:
-  jms:
-    user: JMS Username
-    password: somepasswprd
-    url: SomeURL

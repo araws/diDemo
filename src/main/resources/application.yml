@@ -1,0 +1,13 @@
+anty:
+  jms:
+    user: JMS Username
+    password: somepasswprd
+    url: SomeURL
+
+--- # this is file separator
+
+spring:
+  profiles: de
+anty:
+  jms:
+    user: JMS Username @@@@@@@@@@@@@ German
