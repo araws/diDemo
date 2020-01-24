@@ -3,10 +3,8 @@ package pl.antygravity.didemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import pl.antygravity.didemo.controllers.ConstructorInjectedController;
 import pl.antygravity.didemo.controllers.MyController;
-import pl.antygravity.didemo.controllers.PropertyInjectedController;
-import pl.antygravity.didemo.controllers.SetterInjectedController;
+import pl.antygravity.didemo.examplebeans.FakeDataSource;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -16,10 +14,9 @@ public class DiDemoApplication {
 
         MyController controller = ctx.getBean(MyController.class);
 
-        System.out.println(controller.sayHello());
-        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+        FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+
+        System.out.println(fakeDataSource.getUser());
     }
 
 }
