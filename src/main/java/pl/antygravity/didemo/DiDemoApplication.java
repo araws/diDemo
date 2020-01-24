@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import pl.antygravity.didemo.controllers.MyController;
 import pl.antygravity.didemo.examplebeans.FakeDataSource;
+import pl.antygravity.didemo.examplebeans.FakeJmsBroker;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -17,6 +18,10 @@ public class DiDemoApplication {
         FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 
         System.out.println(fakeDataSource.getUser());
+
+        FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+
+        System.out.println(fakeJmsBroker.getUser());
     }
 
 }
